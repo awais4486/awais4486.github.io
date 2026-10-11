@@ -2,15 +2,16 @@
 window.SITE = {
   name: "Awais Ahmed",
   role: "SOC Analyst | Cyber Enthusiast",
-  headline: "I build software and defend the networks it runs on.",
-  intro: "Computer Scientist (CGPA 3.65/4.00) working across mobile development, web scraping and cybersecurity operations, based in Rawalpindi, Pakistan.",
+  headline: "iOS Developer. Security Analyst. Builder.",
+  intro: "Computer Scientist working across mobile development, web scraping and cybersecurity operations, based in Rawalpindi, Pakistan.",
   status: "Open to SOC and security roles",
   links: {
     email: "waisigondal4486@gmail.com",
     phone: "+923390104486",
     linkedin: "https://www.linkedin.com/in/awais-ahmed-32b038284",
     github: "https://github.com/awais4486",
-    resume: "assets/Awais_Ahmed_CV.pdf"
+    resume: "https://docs.google.com/document/d/1fhtin8TGOP_DxC79CUWbeuuV8XKUa8-o/edit?usp=drive_link&ouid=113392373546237793977&rtpof=true&sd=true",
+    resumeDownload: "https://docs.google.com/document/d/1fhtin8TGOP_DxC79CUWbeuuV8XKUa8-o/export?format=pdf"
   },
 
   // Contact form. Get a free access key at https://web3forms.com (enter your email, they send you the key).
@@ -23,7 +24,7 @@ window.SITE = {
     photo: "Profile_Picture.jpeg" // looked up in assets/ first, then the main folder
   },
   education: [
-    { school: "KICSIT, Institute of Space Technology, Islamabad", degree: "BS Computer Science (CGPA 3.65/4.00)", years: "2022 – 2026" }
+    { school: "KICSIT, Institute of Space Technology, Islamabad", degree: "BS Computer Science", years: "2022 – 2026" }
   ],
   experience: [
     { title: "Mobile App Developer (React Native), GOL Technologies", period: "Feb 2026 – Present · Islamabad", points: [
@@ -59,10 +60,9 @@ window.SITE = {
   ],
 
   // SCREENSHOTS
-  // The most reliable way (works on Vercel, Netlify, GitHub Pages) is to list the files in `images`.
-  //   images: ["assets/screenshots/idps/1.png", "assets/screenshots/idps/2.png"]
-  // If `images` is empty, the site tries to read `folder` (this only works when run locally),
-  // and finally falls back to the single `image` path.
+  // Use explicit paths in `images` so galleries work on static hosts such as GitHub Pages.
+  //   images: ["IDPS/screenshot-1.jpeg", "IDPS/screenshot-2.jpeg"]
+  // Leave both `images` and `image` empty when a project has no screenshots.
   projects: [
     {
       group: "apps",
@@ -74,9 +74,7 @@ window.SITE = {
         "Available as both a website and a mobile app"
       ],
       tags: ["React Native", "AI Agents", "Web", "Mobile"],
-      folder: "Alive5",
       images: [],
-      image: "assets/screenshots/alive5.png",
       github: "",
       live: "https://www.alive5.com/",
       liveLabel: "Visit website"
@@ -93,9 +91,17 @@ window.SITE = {
         "Pull-to-refresh so the catalog stays in sync with the backend"
       ],
       tags: ["React Native", "Strapi", "REST API", "Camera", "Async Storage", "JavaScript"],
-      folder: "ReactNative",
-      images: [],
-      image: "assets/screenshots/store.png",
+      images: [
+        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.01 AM (1).jpeg",
+        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.01 AM.jpeg",
+        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.02 AM (1).jpeg",
+        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.02 AM (2).jpeg",
+        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.02 AM (3).jpeg",
+        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.02 AM (4).jpeg",
+        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.02 AM (5).jpeg",
+        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.02 AM (6).jpeg",
+        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.02 AM.jpeg"
+      ],
       github: "",
       live: ""
     },
@@ -109,9 +115,18 @@ window.SITE = {
         "Data flow bridges low-level packet capture with dashboard actions for fast incident response"
       ],
       tags: ["Python", "Scapy", "Linux", "iptables", "Packet Analysis", "Log Automation"],
-      folder: "IDPS",
-      images: [],
-      image: "assets/screenshots/idps.png",
+      images: [
+        "IDPS/WhatsApp Image 2026-09-29 at 12.45.11 PM.jpeg",
+        "IDPS/WhatsApp Image 2026-09-29 at 12.45.12 PM (1).jpeg",
+        "IDPS/WhatsApp Image 2026-09-29 at 12.45.12 PM.jpeg",
+        "IDPS/WhatsApp Image 2026-09-29 at 12.45.13 PM.jpeg",
+        "IDPS/WhatsApp Image 2026-09-29 at 12.45.14 PM (1).jpeg",
+        "IDPS/WhatsApp Image 2026-09-29 at 12.45.14 PM.jpeg",
+        "IDPS/WhatsApp Image 2026-09-29 at 12.45.15 PM (1).jpeg",
+        "IDPS/WhatsApp Image 2026-09-29 at 12.45.15 PM.jpeg",
+        "IDPS/WhatsApp Image 2026-09-29 at 12.45.16 PM.jpeg",
+        "IDPS/WhatsApp Image 2026-09-29 at 12.45.17 PM.jpeg"
+      ],
       github: "",
       live: ""
     },
@@ -127,7 +142,6 @@ window.SITE = {
       ],
       tags: ["Kali Linux", "Security Onion", "pfSense", "Ubuntu", "Metasploitable", "Windows Server"],
       images: [],
-      image: "assets/screenshots/labs.png",
       github: "",
       live: ""
     },
@@ -141,7 +155,6 @@ window.SITE = {
       ],
       tags: ["Magnet AXIOM Process", "Magnet AXIOM Examine"],
       images: [],
-      image: "assets/screenshots/forensics.png",
       github: "",
       live: ""
     }

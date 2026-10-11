@@ -11,6 +11,7 @@ h.setAttribute("aria-label", S.headline);
 h.innerHTML = S.headline.split(" ").map((w, i) => `<span class="w" aria-hidden="true"><span style="--i:${i}">${esc(w)}</span></span>`).join(" ");
 $("intro").textContent = S.intro;
 $("btn-resume").href = S.links.resume;
+$("btn-resume-download").href = S.links.resumeDownload;
 $("about-text").textContent = S.about.text;
 $("about-loc").textContent = S.about.location;
 $("foot").textContent = `© ${new Date().getFullYear()} ${S.name}`;
@@ -90,11 +91,14 @@ async function listFolder(folder) {
 }
 
 async function buildGallery(shot, p) {
-  shot.textContent = "Loading screenshots…";
   let imgs = [];
   if (p.folder) imgs = await listFolder(p.folder);
   if (!imgs.length && p.images && p.images.length) imgs = p.images.map(f => (p.folder && !f.includes("/") ? `${p.folder}/${f}` : f));
   if (!imgs.length && p.image) imgs = [p.image];
+  if (!imgs.length) {
+    shot.remove();
+    return;
+  }
 
   // keep only images that really load
   const ok = [];

@@ -9,4 +9,5 @@ Open a terminal in this folder and run one of:
 Then open http://localhost:3000
 
 ## Change content
-Edit `data.js` only. Put screenshots in `assets/screenshots/` and your photo at `assets/me.jpg`.
+Edit `data.js` only. Use explicit paths in each project's `images` list for screenshots,
+and set `about.photo` to the relative path of your profile photo.
