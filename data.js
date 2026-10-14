@@ -3,7 +3,7 @@ window.SITE = {
   name: "Awais Ahmed",
   role: "SOC Analyst | Cyber Enthusiast",
   headline: "I build software and defend the networks it runs on.",
-  intro: "Computer Scientist (CGPA 3.65/4.00) working across mobile development, web scraping and cybersecurity operations, based in Rawalpindi, Pakistan.",
+  intro: "Computer scientist specializing in secure mobile engineering, automated data pipelines, and threat defense.",
   status: "Open to SOC and security roles",
   links: {
     email: "waisigondal4486@gmail.com",
@@ -66,23 +66,6 @@ window.SITE = {
   projects: [
     {
       group: "apps",
-      title: "Alive5",
-      summary: "An app and website that lets organizations chat safely and securely with customized AI agents on one trusted platform.",
-      points: [
-        "Organizations talk to AI agents tailored to their own needs",
-        "Built around private, secure conversations",
-        "Available as both a website and a mobile app"
-      ],
-      tags: ["React Native", "AI Agents", "Web", "Mobile"],
-      folder: "Alive5",
-      images: [],
-      image: "assets/screenshots/alive5.png",
-      github: "",
-      live: "https://www.alive5.com/",
-      liveLabel: "Visit website"
-    },
-    {
-      group: "apps",
       title: "React Native Store App",
       summary: "A mobile store app that loads its products from a Strapi backend and presents them in a clean, fast shopping experience on iOS and Android.",
       points: [
@@ -94,7 +77,17 @@ window.SITE = {
       ],
       tags: ["React Native", "Strapi", "REST API", "Camera", "Async Storage", "JavaScript"],
       folder: "ReactNative",
-      images: [],
+      images: [
+        "WhatsApp Image 2026-10-01 at 10.19.01 AM (1).jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.01 AM.jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.02 AM (1).jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.02 AM (2).jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.02 AM (3).jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.02 AM (4).jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.02 AM (5).jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.02 AM (6).jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.02 AM.jpeg"
+      ],
       image: "assets/screenshots/store.png",
       github: "",
       live: ""
@@ -110,7 +103,18 @@ window.SITE = {
       ],
       tags: ["Python", "Scapy", "Linux", "iptables", "Packet Analysis", "Log Automation"],
       folder: "IDPS",
-      images: [],
+      images: [
+        "WhatsApp Image 2026-09-29 at 12.45.11 PM.jpeg",
+        "WhatsApp Image 2026-09-29 at 12.45.12 PM (1).jpeg",
+        "WhatsApp Image 2026-09-29 at 12.45.12 PM.jpeg",
+        "WhatsApp Image 2026-09-29 at 12.45.13 PM.jpeg",
+        "WhatsApp Image 2026-09-29 at 12.45.14 PM (1).jpeg",
+        "WhatsApp Image 2026-09-29 at 12.45.14 PM.jpeg",
+        "WhatsApp Image 2026-09-29 at 12.45.15 PM (1).jpeg",
+        "WhatsApp Image 2026-09-29 at 12.45.15 PM.jpeg",
+        "WhatsApp Image 2026-09-29 at 12.45.16 PM.jpeg",
+        "WhatsApp Image 2026-09-29 at 12.45.17 PM.jpeg"
+      ],
       image: "assets/screenshots/idps.png",
       github: "",
       live: ""
@@ -126,7 +130,11 @@ window.SITE = {
         "Local Ubuntu and Windows Server environments"
       ],
       tags: ["Kali Linux", "Security Onion", "pfSense", "Ubuntu", "Metasploitable", "Windows Server"],
-      images: [],
+      images: [
+        "Monitoring/Screenshot 2026-10-09 213737.png",
+        "Monitoring/Screenshot 2026-10-09 214306.png",
+        "Monitoring/Screenshot 2026-10-09 214335.png"
+      ],
       image: "assets/screenshots/labs.png",
       github: "",
       live: ""
@@ -140,8 +148,6 @@ window.SITE = {
         "Forensic reports with timeline analysis and evidence findings"
       ],
       tags: ["Magnet AXIOM Process", "Magnet AXIOM Examine"],
-      images: [],
-      image: "assets/screenshots/forensics.png",
       github: "",
       live: ""
     }
