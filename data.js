@@ -66,21 +66,6 @@ window.SITE = {
   projects: [
     {
       group: "apps",
-      title: "Alive5",
-      summary: "An app and website that lets organizations chat safely and securely with customized AI agents on one trusted platform.",
-      points: [
-        "Organizations talk to AI agents tailored to their own needs",
-        "Built around private, secure conversations",
-        "Available as both a website and a mobile app"
-      ],
-      tags: ["React Native", "AI Agents", "Web", "Mobile"],
-      images: [],
-      github: "",
-      live: "https://www.alive5.com/",
-      liveLabel: "Visit website"
-    },
-    {
-      group: "apps",
       title: "React Native Store App",
       summary: "A mobile store app that loads its products from a Strapi backend and presents them in a clean, fast shopping experience on iOS and Android.",
       points: [
@@ -91,17 +76,19 @@ window.SITE = {
         "Pull-to-refresh so the catalog stays in sync with the backend"
       ],
       tags: ["React Native", "Strapi", "REST API", "Camera", "Async Storage", "JavaScript"],
+      folder: "ReactNative",
       images: [
-        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.01 AM (1).jpeg",
-        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.01 AM.jpeg",
-        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.02 AM (1).jpeg",
-        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.02 AM (2).jpeg",
-        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.02 AM (3).jpeg",
-        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.02 AM (4).jpeg",
-        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.02 AM (5).jpeg",
-        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.02 AM (6).jpeg",
-        "ReactNative/WhatsApp Image 2026-10-01 at 10.19.02 AM.jpeg"
+        "WhatsApp Image 2026-10-01 at 10.19.01 AM (1).jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.01 AM.jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.02 AM (1).jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.02 AM (2).jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.02 AM (3).jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.02 AM (4).jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.02 AM (5).jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.02 AM (6).jpeg",
+        "WhatsApp Image 2026-10-01 at 10.19.02 AM.jpeg"
       ],
+      image: "assets/screenshots/store.png",
       github: "",
       live: ""
     },
@@ -141,7 +128,12 @@ window.SITE = {
         "Local Ubuntu and Windows Server environments"
       ],
       tags: ["Kali Linux", "Security Onion", "pfSense", "Ubuntu", "Metasploitable", "Windows Server"],
-      images: [],
+      images: [
+        "Monitoring/Screenshot 2026-10-09 213737.png",
+        "Monitoring/Screenshot 2026-10-09 214306.png",
+        "Monitoring/Screenshot 2026-10-09 214335.png"
+      ],
+      image: "assets/screenshots/labs.png",
       github: "",
       live: ""
     },

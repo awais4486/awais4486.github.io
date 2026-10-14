@@ -15,7 +15,7 @@ a{color:inherit}
 .brand{font:700 20px var(--head);text-decoration:none}
 .nav nav{display:flex;gap:22px}
 .nav nav a{text-decoration:none;color:var(--muted);font-weight:500}
-.nav nav a:hover{color:var(--ink)}
+.nav nav a:hover{color:var(--muted)}
 .wrap{max-width:1000px;margin:0 auto;padding:88px 24px 24px}
 h1,h2,h3{font-family:var(--head);line-height:1.1;margin:0}
 h2{font-size:clamp(30px,4vw,44px);margin-bottom:36px}
@@ -68,11 +68,12 @@ h1{font-size:clamp(40px,7.4vw,88px);font-weight:700;letter-spacing:-.02em;max-wi
 .glow{position:fixed;left:0;top:0;width:420px;height:420px;margin:-210px 0 0 -210px;border-radius:50%;pointer-events:none;z-index:0;
   background:radial-gradient(circle,color-mix(in srgb,var(--accent) 22%,transparent),transparent 65%);opacity:0;transition:opacity .4s}
 .glow.on{opacity:1}
-main,.nav,.foot{position:relative;z-index:1}
+main,.foot{position:relative;z-index:1}
+.nav{position:sticky;top:0;z-index:10}
 .nav nav a{position:relative}
 .nav nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:0 50%;transition:transform .3s}
 .nav nav a.active{color:var(--ink)}
-.nav nav a.active::after,.nav nav a:hover::after{transform:scaleX(1)}
+.nav nav a.active::after{transform:scaleX(1)}
 
 .hero{position:relative}
 .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;z-index:-1;background:var(--accent)}

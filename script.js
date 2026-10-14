@@ -54,9 +54,11 @@ $("project-list").append(...S.projects.map(p => {
   const links = [p.github && `<a href="${esc(p.github)}" target="_blank" rel="noopener">GitHub</a>`, p.live && `<a href="${esc(p.live)}" target="_blank" rel="noopener">${esc(p.liveLabel || "Live demo")}</a>`].filter(Boolean).join("");
   art.append(
     el("div", "", `<h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p><ul>${p.points.map(x => `<li>${esc(x)}</li>`).join("")}</ul><div class="chips">${p.tags.map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div><div class="links">${links}</div>`));
-  const shot = el("div", "shot");
-  buildGallery(shot, p);
-  art.append(shot);
+  if (p.folder || p.image || (p.images && p.images.length)) {
+    const shot = el("div", "shot");
+    buildGallery(shot, p);
+    art.append(shot);
+  }
   return art;
 }));
 
@@ -192,9 +194,15 @@ const secs = links.map(a => document.querySelector(a.getAttribute("href")));
 function onScroll() {
   const max = document.documentElement.scrollHeight - innerHeight;
   bar.style.transform = `scaleX(${max > 0 ? scrollY / max : 0})`;
-  let cur = 0;
-  secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < innerHeight * .4) cur = i; });
-  links.forEach((a, i) => a.classList.toggle("active", i === cur));
+  const atBottom = scrollY + innerHeight >= document.documentElement.scrollHeight - 1;
+  let cur = atBottom ? secs.length - 1 : 0;
+  if (!atBottom) secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < innerHeight * .4) cur = i; });
+  links.forEach((a, i) => {
+    const active = i === cur;
+    a.classList.toggle("active", active);
+    if (active) a.setAttribute("aria-current", "location");
+    else a.removeAttribute("aria-current");
+  });
 }
 addEventListener("scroll", onScroll, { passive: true });
 onScroll();
