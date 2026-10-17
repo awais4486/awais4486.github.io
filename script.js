@@ -101,9 +101,11 @@ async function listFolder(folder) {
 }
 
 async function buildGallery(shot, p) {
-  let imgs = [];
-  if (p.folder) imgs = await listFolder(p.folder);
-  if (!imgs.length && p.images && p.images.length) imgs = p.images.map(f => (p.folder && !f.includes("/") ? `${p.folder}/${f}` : f));
+  const discovered = p.folder ? await listFolder(p.folder) : [];
+  const configured = p.images && p.images.length
+    ? p.images.map(f => (p.folder && !f.includes("/") ? `${p.folder}/${f}` : f))
+    : [];
+  let imgs = [...new Set([...configured, ...discovered])];
   if (!imgs.length && p.image) imgs = [p.image];
   if (!imgs.length) {
     shot.remove();
@@ -121,7 +123,7 @@ async function buildGallery(shot, p) {
   const show = (n) => { i = (n + list.length) % list.length; img.src = list[i]; count.textContent = `${i + 1} / ${list.length}`; };
   const count = el("span", "g-count");
   shot.replaceChildren(img);
-  shot.classList.add("gallery");
+  shot.classList.add("gallery", `gallery-${p.orientation || "landscape"}`);
   img.addEventListener("click", () => openLightbox(list, i));
   if (list.length > 1) {
     const prev = el("button", "g-btn prev", "‹"), next = el("button", "g-btn next", "›");
