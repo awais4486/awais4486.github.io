@@ -49,12 +49,20 @@ $("skills").append(...Object.entries(S.skills).map(([group, items]) =>
 
 $("certs").append(...S.certifications.map(c => el("li", "", `${esc(c.name)}<small>${esc(c.issuer)}</small>`)));
 
-$("project-list").append(...S.projects.map(p => {
-  const art = el("article", "project");
-  const links = [p.github && `<a href="${esc(p.github)}" target="_blank" rel="noopener">GitHub</a>`, p.live && `<a href="${esc(p.live)}" target="_blank" rel="noopener">${esc(p.liveLabel || "Live demo")}</a>`].filter(Boolean).join("");
+$("project-list").append(...S.projects.map((p, projectIndex) => {
+  const hasGallery = p.folder || p.image || (p.images && p.images.length);
+  const isLastProject = projectIndex === S.projects.length - 1;
+  const art = el("article", `project${isLastProject ? " project-text-only" : ""}`);
+  const links = [
+    p.github && `<a href="${esc(p.github)}" target="_blank" rel="noopener">GitHub</a>`,
+    p.document && `<a href="${esc(p.document)}" target="_blank" rel="noopener">Project document</a>`,
+    p.live && `<a href="${esc(p.live)}" target="_blank" rel="noopener">${esc(p.liveLabel || "Live demo")}</a>`
+  ].filter(Boolean).join("");
+  const meta = [p.role, p.status, p.year].filter(Boolean).map(esc).join(" · ");
+  const details = `${p.description ? `<p class="project-description">${esc(p.description)}</p>` : ""}${meta ? `<p class="project-meta">${meta}</p>` : ""}`;
   art.append(
-    el("div", "", `<h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p><ul>${p.points.map(x => `<li>${esc(x)}</li>`).join("")}</ul><div class="chips">${p.tags.map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div><div class="links">${links}</div>`));
-  if (p.folder || p.image || (p.images && p.images.length)) {
+    el("div", "", `<h3>${esc(p.title)}</h3><p>${esc(p.summary)}</p>${details}<ul>${p.points.map(x => `<li>${esc(x)}</li>`).join("")}</ul><div class="chips">${p.tags.map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div><div class="links">${links}</div>`));
+  if (hasGallery) {
     const shot = el("div", "shot");
     buildGallery(shot, p);
     art.append(shot);

@@ -149,6 +149,27 @@ window.SITE = {
       images: [],
       github: "",
       live: ""
+    },
+    {
+      group: "security",
+      title: "rn-secscan: Security Scanner for React Native Apps",
+      summary: "Open-source static analyzer for React Native apps that checks JavaScript/TypeScript code and native config, and reports findings as SARIF mapped to OWASP MASVS.",
+      description: "Most security scanners target backend code, and few understand React Native’s attack surface, which includes native configuration outside the JavaScript files. I built rn-secscan as a TypeScript CLI and GitHub Action that covers both. It parses code with ts-morph, applies nine rules, and outputs SARIF so pull requests and the Security tab show findings natively. I evaluated it on about 20 open-source React Native apps, using a protocol I wrote and committed before scanning, with held-out sets, blind labeling and confidence intervals. An opt-in, experimental AI triage step can filter likely false positives.",
+      points: [
+        "5 JavaScript/TypeScript rules: sensitive data in AsyncStorage, hardcoded secrets, cleartext HTTP, sensitive logging and WebView misconfiguration",
+        "4 native-config rules: Android allowBackup, cleartext traffic, exported components without permissions and iOS App Transport Security",
+        "SARIF output with OWASP MASVS mapping, uploaded to GitHub code scanning",
+        "Guarded auto-fix for two rules, with preview first and review required before applying",
+        "Evaluation tooling with export, eval and redaction commands, a vulnerable testbed with ground truth and a benchmark harness against ESLint’s security plugin and Semgrep",
+        "Experimental AI triage with the Claude API, enabled only with explicit consent and without sending repository names or file paths"
+      ],
+      tags: ["TypeScript", "Node.js", "ts-morph", "SARIF", "OWASP MASVS", "GitHub Actions", "Semgrep", "ESLint", "Vitest", "Claude API"],
+      role: "Solo project (design, implementation, evaluation)",
+      status: "Active development (v0.1)",
+      year: "2026",
+      github: "https://github.com/awaisahmed9025-jpg/rn-secscan",
+      document: "https://docs.google.com/document/d/1FETpV0llKC6dDWg8TVzJt-n50dYocS3B/edit?usp=sharing&ouid=113392373546237793977&rtpof=true&sd=true",
+      live: ""
     }
   ]
 };
