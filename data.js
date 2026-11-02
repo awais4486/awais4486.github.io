@@ -10,8 +10,8 @@ window.SITE = {
     phone: "+923390104486",
     linkedin: "https://www.linkedin.com/in/awais-ahmed-32b038284",
     github: "https://github.com/awais4486",
-    resume: "https://drive.google.com/file/d/1GU4Sx-M955o5b7ofSv35HMw8hX9C_b50/view?usp=sharing",
-    resumeDownload: "https://drive.google.com/uc?export=download&id=1GU4Sx-M955o5b7ofSv35HMw8hX9C_b50"
+    resume: "https://drive.google.com/file/d/1FfBx8rOehWwuSZm1C7_tUOqEJ_cp_3HV/view?usp=sharing",
+    resumeDownload: "https://drive.google.com/uc?export=download&id=1FfBx8rOehWwuSZm1C7_tUOqEJ_cp_3HV"
   },
 
   // Contact form. Get a free access key at https://web3forms.com (enter your email, they send you the key).
